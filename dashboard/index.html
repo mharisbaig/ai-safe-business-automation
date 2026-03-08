@@ -1,12 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Safety Dashboard - Arbre IT Support and Solution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">🌳 Arbre IT Support and Solution</div>
+        <div class="tagline">AI Safe Business Automation Platform</div>
+    </div>
 
-<h1>AI Automation Dashboard</h1>
+    <div class="container">
+        <h1>AI Safety Monitoring Dashboard</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card safe">
+                <h3>Safe Requests</h3>
+                <div class="value" id="safe-requests">0</div>
+            </div>
+            <div class="stat-card warning">
+                <h3>Flagged Requests</h3>
+                <div class="value" id="flagged-requests">0</div>
+            </div>
+            <div class="stat-card danger">
+                <h3>Blocked Requests</h3>
+                <div class="value" id="blocked-requests">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Avg Response Time</h3>
+                <div class="value" id="avg-response-time">0ms</div>
+            </div>
+        </div>
 
-<div>
-Total AI Requests: <span id="requests"></span>
-</div>
+        <div class="section">
+            <h2>Safety Status</h2>
+            <div class="sindh-status" id="safety-status">
+                <span class="status-badge active">🛡️ Guardrails Active</span>
+                <span class="status-badge">PII Redaction: <span id="pii-status">Enabled</span></span>
+                <span class="status-badge">Injection Detection: <span id="injection-status">Enabled</span></span>
+            </div>
+        </div>
 
-<div>
-Safety Alerts: <span id="alerts"></span>
-</div>
+        <div class="section">
+            <h2>Recent Activity</h2>
+            <table id="activity-table">
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                        <th>Safety Checks</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="activity-body">
+                </tbody>
+            </table>
+        </div>
 
-<button onclick="loadData()">Refresh</button>
+        <div class="section">
+            <h2>Test AI Safety</h2>
+            <div class="test-area">
+                <textarea id="test-prompt" placeholder="Enter test prompt here..."></textarea>
+                <button onclick="testPrompt()" class="btn-primary">Test Safety Filters</button>
+                <div id="test-result" class="result-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🌳 Arbre IT Support and Solution | Karachi, Pakistan</p>
+        <p>Contact: haris.baig@arbreitsolutions.com</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
